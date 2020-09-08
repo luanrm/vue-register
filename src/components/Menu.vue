@@ -2,8 +2,10 @@
   <div>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
-      <a href="#">Clientes</a>
-      <a href="#">Produtos</a>
+      <a href="javascript:void(0)" @click="go('/customer')">Clientes</a>
+      <a href="javascript:void(0)" @click="go('/product')">Produtos</a>
+      <!-- <router-link to="/foo">Go to Foo</router-link>
+      <router-link to="/bar">Go to Bar</router-link>-->
     </div>
     <button class="btn btn-outline-secondary m-3" @click="openNav()">menu</button>
   </div>
@@ -16,14 +18,17 @@ export default {
     return {};
   },
   methods: {
+    go(route) {
+      this.$router.push(route);
+      this.closeNav();
+    },
     openNav() {
       document.getElementById("mySidenav").style.display = "block";
-      
     },
     closeNav() {
       document.getElementById("mySidenav").style.display = "none";
-    }
-  }
+    },
+  },
 };
 </script>
 

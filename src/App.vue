@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <Menu/>
-    <Register />
+    <Menu />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Menu from "./components/Menu.vue";
-import Register from "./components/Register.vue";
+// import Product from "./components/Product.vue";
 
 export default {
   name: "App",
   components: {
-    Register,
+    // Product,
     Menu,
   },
 };
