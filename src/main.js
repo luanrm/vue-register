@@ -15,10 +15,11 @@ Vue.use(Toasted, {
 Vue.use(VueRouter);
 
 import Product from "./components/Product";
-
-const Customer = { template: "<div>Customer</div>" };
+import Customer from "./components/Customer";
+import Home from "./components/Home";
 
 const routes = [
+    { path: "/", component: Home },
     { path: "/product", component: Product },
     { path: "/customer", component: Customer },
 ];
