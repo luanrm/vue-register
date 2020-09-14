@@ -158,7 +158,6 @@ export default {
         axios
           .put("https://localhost:5001/product/", this.product)
           .then(() => {
-            this.loader = false;
             this.list();
             this.$toasted.show("salvo!");
           })
@@ -176,7 +175,6 @@ export default {
       axios
         .post("https://localhost:5001/product/", this.product)
         .then(() => {
-          this.loader = false;
           this.$toasted.show("salvo");
           this.list();
         })
@@ -205,7 +203,6 @@ export default {
           },
         })
         .then(() => {
-          this.loader = false;
           this.$toasted.show("salvo!");
           this.list();
         })

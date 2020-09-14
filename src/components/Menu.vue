@@ -2,10 +2,10 @@
   <div>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
-      <a href="javascript:void(0)" @click="go('/customer')">Clientes</a>
-      <a href="javascript:void(0)" @click="go('/product')">Produtos</a>
-      <!-- <router-link to="/foo">Go to Foo</router-link>
-      <router-link to="/bar">Go to Bar</router-link>-->
+      <a href="javascript:void(0)" @click="go('/customer')">clientes</a>
+      <a href="javascript:void(0)" @click="go('/product')">produtos</a>
+      <a href="javascript:void(0)" @click="go('/request')">pedidos</a>
+     
     </div>
     <button class="btn btn-outline-secondary m-3" @click="openNav()">menu</button>
   </div>

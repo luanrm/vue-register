@@ -24,7 +24,7 @@
             <tr>
               <th scope="col">Id</th>
               <th scope="col">Nome</th>
-              <th scope="col">email</th>
+              <th scope="col">Email</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -37,7 +37,7 @@
                 <button @click="edit(item.id)" class="btn btn-outline-secondary mr-2">
                   <span>editar</span>
                 </button>
-                <button @click="remove(item.id)" class="btn btn-outline-secondary">
+                <button @click="remove(item.id)" class="btn btn-outline-secondary mr-2">
                   <span>excluir</span>
                 </button>
               </td>
@@ -180,7 +180,6 @@ export default {
         axios
           .put("https://localhost:5001/customer/", this.customer)
           .then(() => {
-            this.loader = false;
             this.list();
             this.$toasted.show("salvo!");
           })
@@ -195,7 +194,6 @@ export default {
       axios
         .post("https://localhost:5001/customer/", this.customer)
         .then(() => {
-          this.loader = false;
           this.$toasted.show("salvo");
           this.list();
         })
@@ -222,9 +220,8 @@ export default {
           },
         })
         .then(() => {
-          this.loader = false;
-          this.$toasted.show("salvo!");
           this.list();
+          this.$toasted.show("salvo!");
         })
         .catch(() => {
           this.loader = false;

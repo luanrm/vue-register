@@ -16,12 +16,14 @@ Vue.use(VueRouter);
 
 import Product from "./components/Product";
 import Customer from "./components/Customer";
+import Request from "./components/Request";
 import Home from "./components/Home";
 
 const routes = [
     { path: "/", component: Home },
     { path: "/product", component: Product },
     { path: "/customer", component: Customer },
+    { path: "/request", component: Request },
 ];
 
 const router = new VueRouter({
